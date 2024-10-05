@@ -1,0 +1,36 @@
+.footerWrapper {
+  padding-bottom: 40px;
+  background-color: $main-color;
+}
+.footer {
+  padding: $section-padding;
+  background-color: $second-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 100px;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      list-style: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}

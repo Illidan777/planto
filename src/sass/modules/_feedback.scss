@@ -1,0 +1,11 @@
+.feedback {
+  &__wrapper {
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(auto, auto));
+    grid-auto-rows: minmax(auto, auto);
+    row-gap: 120px;
+    column-gap: 40px;
+  }
+}

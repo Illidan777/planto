@@ -1,0 +1,66 @@
+.text {
+
+  &__weight {
+    &_super_bold {
+      color: $second-text-color;
+      font-weight: 900;
+    }
+
+    &_semi_bold {
+      color: $second-text-color;
+      font-weight: 700;
+    }
+
+    &_medium {
+      font-weight: 500;
+    }
+
+    &_regular {
+      font-weight: 400;
+    }
+
+    &_light {
+      font-weight: 300;
+    }
+
+    &_thin {
+      font-weight: 300;
+    }
+  }
+
+  &__simple {
+    &__size {
+      &_big {
+        font-size: 28px;
+      }
+
+      &_medium {
+        font-size: 23px;
+      }
+
+      &_small {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__title {
+    &__size {
+      &_main {
+        font-size: 118px;
+      }
+
+      &_big {
+        font-size: 55px;
+      }
+
+      &_medium {
+        font-size: 38px;
+      }
+
+      &_small {
+        font-size: 22px;
+      }
+    }
+  }
+}

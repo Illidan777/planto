@@ -1,0 +1,21 @@
+.topSelling {
+  &__topPlants {
+    padding-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(640px, auto));
+    grid-auto-rows: minmax(640px, auto);
+    row-gap: 120px;
+    column-gap: 40px;
+  }
+
+  &__item {
+    &_purchase {
+      display: flex;
+      justify-content: space-between;
+    }
+    &_info {
+      padding: 60px;
+    }
+  }
+}

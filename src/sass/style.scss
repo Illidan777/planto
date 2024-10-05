@@ -1,0 +1,23 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import 'base/variables';
+@import 'base/text';
+@import 'base/general';
+
+@import 'modules/promo';
+@import 'modules/topSelling';
+@import 'modules/feedback';
+@import 'modules/best02';
+@import 'modules/footer';
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $main-text-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
