@@ -1,0 +1,9 @@
+.feedback {
+  padding: var(--section-padding);
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: minmax(280px, auto);
+    gap: 40px;
+  }
+}

@@ -2,12 +2,12 @@
 
   &__weight {
     &_super_bold {
-      color: $second-text-color;
+      color: var(--second-text-color);
       font-weight: 900;
     }
 
     &_semi_bold {
-      color: $second-text-color;
+      color: var(--second-text-color);
       font-weight: 700;
     }
 

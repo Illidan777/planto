@@ -1,0 +1,250 @@
+@media (max-width: 1500px) {
+  .text {
+
+    &__simple {
+      &__size {
+        &_big {
+          font-size: 26px;
+        }
+
+        &_medium {
+          font-size: 21px;
+        }
+
+        &_small {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__title {
+      &__size {
+        &_main {
+          font-size: 85px;
+        }
+
+        &_big {
+          font-size: 53px;
+        }
+
+        &_medium {
+          font-size: 36px;
+        }
+
+        &_small {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .bigPlantItem{
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(60%, auto) minmax(40%, auto);
+    align-items: center;
+
+    &__image {
+      position: static;
+      grid-row: 2;
+      grid-column: 1;
+
+      &.oppositePosition {
+        grid-column: 1;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__infoBlock {
+      padding-right: unset;
+      grid-column: 1;
+      grid-row: 1;
+      &.oppositePosition {
+        grid-column: 1;
+        padding: 0;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .text {
+    &__title {
+      &__size {
+        &_main {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  .text {
+    &__simple {
+      &__size {
+        &_big {
+          font-size: 26px;
+        }
+
+        &_medium {
+          font-size: 21px;
+        }
+
+        &_small {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__title {
+      &__size {
+
+        &_big {
+          font-size: 50px;
+        }
+
+        &_medium {
+          font-size: 33px;
+        }
+
+        &_small {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .defaultSection {
+    padding: 30px;
+  }
+
+  .bigPlantItem{
+    padding: 50px;
+
+    &__buttons  {
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --section-padding: 40px;
+    --section-content-padding: 80px 0 0 0;
+  }
+
+  .text {
+    &__simple {
+      &__size {
+        &_big {
+          font-size: 24px;
+        }
+
+        &_medium {
+          font-size: 16px;
+        }
+
+        &_small {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__title {
+      &__size {
+        &_main {
+          font-size: 45px;
+        }
+        &_big {
+          font-size: 30px;
+        }
+
+        &_medium {
+          font-size: 22px;
+        }
+
+        &_small {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .sectionTitle {
+    &__leftFrame {
+      left: -10%;
+      bottom: 0;
+    }
+
+    &__rightFrame {
+      left: 83%;
+      bottom: 10%;
+    }
+  }
+
+  .bigPlantItem{
+    display: flex;
+    flex-direction: column;
+    &__buttons  {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 401px) {
+  .text {
+    &__title {
+      &__size {
+        &_big {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .simplePlantItem {
+    &__infoBlock {
+      padding: 0 20px;
+    }
+  }
+
+
+  .feedbackItem {
+    padding: 20px;
+
+    &__executor {
+      grid-template-columns: 1fr;
+      grid-template-rows: 32px 32px 32px 32px;
+      justify-items: center;
+      justify-content: center;
+      row-gap: 5px;
+    }
+
+    &__avatar {
+      grid-column: 1;
+      grid-row: 1 / 2;
+    }
+
+    &__title {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    &__rate {
+      grid-column: 1;
+      grid-row: 4;
+    }
+  }
+}

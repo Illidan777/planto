@@ -1,9 +1,10 @@
 .promo {
+  width: 100%;
   min-height: 2500px;
   background: url(../img/promo/promo-bg.png) center center/cover no-repeat;
 
   &__header {
-    padding: $section-padding;
+    padding: var(--section-padding);
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -26,19 +27,18 @@
   }
 
   &__subsection_title {
-    padding: $section-padding;
+    padding: var(--section-padding);
     display: grid;
     grid-template-rows: minmax(350px, auto) minmax(100px, auto);
     grid-template-columns: 450px 450px 500px;
     justify-content: space-between;
-
-
     background: none;
 
     &__buttons_wrapper {
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      flex-wrap: wrap;
       gap: 35px;
     }
   }
@@ -61,46 +61,13 @@
   }
 
   &__trendyPlants {
+    max-width: 100%;
     background-color: unset;
-  }
 
-  &__trendyPlantItem{
-    margin-top: 130px;
-    padding: 120px 0;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    align-items: center;
-
-    &__image {
-      grid-column: 1;
-      position: absolute;
-      width: 100%;
-      top: -40%;
-      img {
-        //width: 100%;
-      }
-      &.oppositePosition {
-        grid-column: 2;
-      }
-    }
-
-    &__infoBlock {
-      padding-right: 100px;
-      grid-column: 2;
+    &_itemWrapper {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      &.oppositePosition {
-        grid-column: 1;
-        padding-left: 100px;
-      }
-    }
-
-    &__buttons  {
-      display: flex;
-      gap: 30px;
+      gap: 60px;
     }
   }
 }
