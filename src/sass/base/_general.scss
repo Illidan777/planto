@@ -90,6 +90,14 @@ input::placeholder {
 
   }
 
+  &__next-button {
+    cursor: pointer;
+  }
+
+  &__previous-button {
+    cursor: pointer;
+  }
+
   &__navigationBar {
     margin: 40px auto;
     width: 100px;
@@ -101,6 +109,7 @@ input::placeholder {
       border-radius: 100%;
       width: 6px;
       height: 6px;
+      cursor: pointer;
 
       &-active {
         width: 25%;

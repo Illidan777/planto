@@ -6,6 +6,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const fileInclude = require('gulp-file-include');
+const webpack = require('webpack-stream');
+const nodeExternals = require('webpack-node-externals');
 
 gulp.task("server", function () {
     browserSync({
@@ -54,8 +56,36 @@ gulp.task("html", function () {
 
 gulp.task("scripts", function () {
     return gulp
-        .src("src/js/**/*.js")
-        .pipe(gulp.dest("dist/js"))
+        .src("src/js/script.js")
+        .pipe(webpack({
+            mode: "development", // can change on production | development
+            output: {
+                filename: 'js/bundle.js',
+            },
+            watch: true,
+
+            devtool: "source-map",
+            externals: [nodeExternals()],
+            module: {
+                rules: [
+                    {
+                        test: /\.m?js$/,
+                        exclude: /(node_modules|bower_components)/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: [['@babel/preset-env', {
+                                    debug: true,
+                                    corejs: 3,
+                                    useBuiltIns: "usage"
+                                }]]
+                            }
+                        }
+                    },
+                ],
+            },
+        }))
+        .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
 });
 

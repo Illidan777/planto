@@ -85,17 +85,20 @@
                         inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
                 </div>
             </div>
-            <div class="promo__plant-slider">
+            <div class="promo__plant-slider slider">
                 <div class="simplePlantItem defaultItemBlock">
                     <div class="simplePlantItem__image">
                         <img src="../img/plants/plant1.png" alt="plant1">
                     </div>
                     <div class="simplePlantItem__infoBlock">
                         <span class="text__simple__size_medium text__weight_light">Trendy House Plant</span>
-                        <h3 class="text__title__size_medium text__weight_regular">Calathea plant</h3>
-                        <button class="button promo__plant-slider__buyButton">Buy now</button>
+                        <div class="text__title__size_medium text__weight_regular" style="display: flex; justify-content: space-between">
+                            Calathea plant
+                            <div class="slider__next-button"><img src="../icons/right_arrow.svg" alt="right_arrow"></div>
+                        </div>
+                        <button>Buy now</button>
                         <div class="slider__navigationBar">
-                            <div class="slider__navigationBar__item slider__navigationBar__item-active"></div>
+                            <div class="slider__navigationBar__item"></div>
                             <div class="slider__navigationBar__item"></div>
                             <div class="slider__navigationBar__item"></div>
                         </div>
@@ -391,6 +394,6 @@
     </section>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/bundle.js"></script>
 </body>
 </html>
