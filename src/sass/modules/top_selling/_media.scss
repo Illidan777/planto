@@ -22,8 +22,10 @@
     }
 
     &__item {
-      &_info {
-        padding: 25px;
+      &_purchase {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
       }
     }
   }

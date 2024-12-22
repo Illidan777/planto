@@ -1,6 +1,6 @@
-import slider from './modules/slider';
+import initSliders from './modules/slider';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    slider()
+    initSliders()
 });

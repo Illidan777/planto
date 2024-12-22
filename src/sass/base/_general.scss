@@ -81,42 +81,8 @@ input::placeholder {
   }
 }
 
-.slider {
-
-  &__counter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-  }
-
-  &__next-button {
-    cursor: pointer;
-  }
-
-  &__previous-button {
-    cursor: pointer;
-  }
-
-  &__navigationBar {
-    margin: 40px auto;
-    width: 100px;
-    display: flex;
-    justify-content: space-around;
-
-    &__item {
-      background-color: #FFFFFF;
-      border-radius: 100%;
-      width: 6px;
-      height: 6px;
-      cursor: pointer;
-
-      &-active {
-        width: 25%;
-        border-radius: 20%;
-      }
-    }
-  }
+.hide {
+  display: none !important;
 }
 
 .defaultSection {
@@ -183,68 +149,48 @@ input::placeholder {
 }
 
 .simplePlantItem {
-  position: relative;
-  max-width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
 
   &__image {
-    grid-row: 1;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: -15%;
-    bottom: 25%;
-    z-index: 1;
-
     img {
-      width: 120%;
-      height: 100%;
-      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.2) translateY(-20%);
     }
   }
 
   &__infoBlock {
-    grid-row: 2;
-    padding: 0 70px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 10px;
-    width: 100%;
-    height: 100%;
     color: #000;
   }
 }
 
 .bigPlantItem{
-  padding: 120px 100px;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
+  padding: 100px;
+  display: flex;
+  gap: 100px;
 
   &__image {
-    grid-column: 1;
-    position: absolute;
-    width: 100%;
-    top: -40%;
-    &.oppositePosition {
-      grid-column: 2;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.9) translateY(-20%);
     }
   }
 
   &__infoBlock {
-    padding-right: 100px;
-    grid-column: 2;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    &.oppositePosition {
-      grid-column: 1;
-    }
   }
 
   &__buttons  {
@@ -296,6 +242,47 @@ input::placeholder {
 
     .checked {
       color: #ffcc00;
+    }
+  }
+}
+
+.slider {
+
+  &__item {}
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+  }
+
+  &__next-button {
+    cursor: pointer;
+  }
+
+  &__previous-button {
+    cursor: pointer;
+  }
+
+  &__navigationBar {
+
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+      background-color: #FFFFFF;
+      border-radius: 100%;
+      width: 6px;
+      height: 6px;
+      cursor: pointer;
+      transition: all .5s;
+
+      &-active {
+        width: 25%;
+        border-radius: 20%;
+      }
     }
   }
 }

@@ -1,4 +1,13 @@
 .bestO2 {
   min-width: 100%;
   padding: var(--section-padding);
+  &-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .slider__counter, .slider__navigationBar {
+      padding: 10px;
+      margin: 0 auto;
+    }
+  }
 }
