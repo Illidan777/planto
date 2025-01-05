@@ -1,0 +1,186 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "name": "Plant1",
+      "description": {
+        "short": "lorem lorem lorem lorem",
+        "preview": "lorem lorem lorem lorem lorem lorem",
+        "full": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      "price": 123.1,
+      "type": "INDOOR",
+      "careType": "LOW",
+      "irrigationType": "RARE",
+      "lightType" : "BRIGHT_LIGHT",
+      "temperatureRange": "18-24",
+      "size": {
+        "width": 123,
+        "height": 124,
+        "length": 123
+      },
+      "imgUrl": "../img/plants/plant1.png",
+      "advantages": [
+        "Easy to grow",
+        "Cleans air",
+        "Safe for home animals"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Plant2",
+      "description": {
+        "short": "lorem lorem lorem lorem",
+        "preview": "lorem lorem lorem lorem lorem lorem",
+        "full": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      "price": 123.1,
+      "type": "OUTDOOR",
+      "careType": "MEDIUM",
+      "irrigationType": "MODERATE",
+      "lightType" : "PARTIAL_SHADE",
+      "temperatureRange": "18-24",
+      "size": {
+        "width": 123,
+        "height": 124,
+        "length": 123
+      },
+      "imgUrl": "../img/plants/plant2.png",
+      "advantages": [
+        "Easy to grow",
+        "Cleans air",
+        "Safe for home animals"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Plant3",
+      "description": {
+        "short": "lorem lorem lorem lorem",
+        "preview": "lorem lorem lorem lorem lorem lorem",
+        "full": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      "price": 123.1,
+      "type": "SUCCULENT",
+      "careType": "HIGH",
+      "irrigationType": "ABUNDANT",
+      "lightType" : "SHADE",
+      "temperatureRange": "18-24",
+      "size": {
+        "width": 123,
+        "height": 124,
+        "length": 123
+      },
+      "imgUrl": "../img/plants/plant3.png",
+      "advantages": [
+        "Easy to grow",
+        "Cleans air",
+        "Safe for home animals"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Plant4",
+      "description": {
+        "short": "lorem lorem lorem lorem",
+        "preview": "lorem lorem lorem lorem lorem lorem",
+        "full": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      "price": 123.1,
+      "type": "FLOWERING",
+      "careType": "LOW",
+      "irrigationType": "RARE",
+      "lightType" : "BRIGHT_LIGHT",
+      "temperatureRange": "18-24",
+      "size": {
+        "width": 123,
+        "height": 124,
+        "length": 123
+      },
+      "imgUrl": "../img/plants/plant4.png",
+      "advantages": [
+        "Easy to grow",
+        "Cleans air",
+        "Safe for home animals"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Plant5",
+      "description": {
+        "short": "lorem lorem lorem lorem",
+        "preview": "lorem lorem lorem lorem lorem lorem",
+        "full": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      "price": 123.1,
+      "type": "INDOOR",
+      "careType": "MEDIUM",
+      "irrigationType": "MODERATE",
+      "lightType" : "PARTIAL_SHADE",
+      "temperatureRange": "18-24",
+      "size": {
+        "width": 123,
+        "height": 124,
+        "length": 123
+      },
+      "imgUrl": "../img/plants/plant5.png",
+      "advantages": [
+        "Easy to grow",
+        "Cleans air",
+        "Safe for home animals"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Plant6",
+      "description": {
+        "short": "lorem lorem lorem lorem",
+        "preview": "lorem lorem lorem lorem lorem lorem",
+        "full": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      "price": 123.1,
+      "type": "OUTDOOR",
+      "careType": "HIGH",
+      "irrigationType": "ABUNDANT",
+      "lightType" : "SHADE",
+      "temperatureRange": "18-24",
+      "size": {
+        "width": 123,
+        "height": 124,
+        "length": 123
+      },
+      "imgUrl": "../img/plants/plant6.png",
+      "advantages": [
+        "Easy to grow",
+        "Cleans air",
+        "Safe for home animals"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Plant7",
+      "description": {
+        "short": "lorem lorem lorem lorem",
+        "preview": "lorem lorem lorem lorem lorem lorem",
+        "full": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
+      },
+      "price": 123.1,
+      "type": "FLOWERING",
+      "careType": "MEDIUM",
+      "irrigationType": "ABUNDANT",
+      "lightType" : "PARTIAL_SHADE",
+      "temperatureRange": "18-24",
+      "size": {
+        "width": 123,
+        "height": 124,
+        "length": 123
+      },
+      "imgUrl": "../img/plants/plant7.png",
+      "advantages": [
+        "Easy to grow",
+        "Cleans air",
+        "Safe for home animals"
+      ]
+    }
+  ]
+}
