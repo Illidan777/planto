@@ -7,11 +7,50 @@
 }
 
 @media (max-width: 992px) {
+  .plantCard {
+    gap: 40px;
 
+    &__image {
+      width: 250px;
+      height: 250px;
+    }
+
+    &__info {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__description {
+      width: unset;
+    }
+
+    &__characteristics {
+      width: unset;
+      gap: 50px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
+  .plantCard {
+    gap: 30px;
 
+    &__image {
+      width: 200px;
+      height: 200px;
+    }
+
+    &__info {
+      gap: 30px;
+    }
+
+    &__description {
+    }
+
+    &__characteristics {
+      gap: 30px;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -29,8 +68,35 @@
       }
     }
   }
+
+  .plantCard {
+    gap: 20px;
+
+    &__image {
+      width: 150px;
+      height: 150px;
+    }
+
+    &__info {
+      gap: 20px;
+    }
+
+    &__characteristics {
+      gap: 20px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
+  .plantCard {
 
+    &__characteristics {
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 }
