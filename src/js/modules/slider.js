@@ -61,6 +61,26 @@ function initSliders() {
 
             currentSlideTitle.textContent = formattedSlideNumber(slideIndex + 1);
         }
+
+        const autoSlideInterval = setInterval(() => {
+            currentSlideIndex = currentSlideIndex === sliderItems.length - 1
+                ? 0
+                : currentSlideIndex + 1;
+
+            showSlide(currentSlideIndex);
+        }, 3000);
+
+        slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        slider.addEventListener('mouseleave', () => {
+            setInterval(() => {
+                currentSlideIndex = currentSlideIndex === sliderItems.length - 1
+                    ? 0
+                    : currentSlideIndex + 1;
+
+                showSlide(currentSlideIndex);
+            }, 3000);
+        });
+
     })
 
 
