@@ -28,7 +28,7 @@
 @media (max-width: 768px) {
   .modal {
     &__dialog {
-      width: 70%;
+      width: 90%;
     }
 
     &__footer {
@@ -50,10 +50,6 @@
 
 @media (max-width: 576px) {
   .modal {
-    &__dialog {
-      width: 90%;
-    }
-
     &__footer {
       img {
         height: 230px;

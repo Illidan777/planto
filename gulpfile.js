@@ -9,6 +9,7 @@ const fileInclude = require('gulp-file-include');
 const webpack = require('webpack-stream');
 const nodeExternals = require('webpack-node-externals');
 
+
 gulp.task("server", function () {
     browserSync({
         server: {
@@ -82,7 +83,7 @@ gulp.task("scripts", function () {
                             }
                         }
                     },
-                ],
+                ]
             },
         }))
         .pipe(gulp.dest("dist"))

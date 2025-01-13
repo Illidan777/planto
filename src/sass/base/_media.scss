@@ -51,33 +51,44 @@
     }
   }
 
-  .bigPlantItem{
+  .bigPlantItem {
     &__image {
-      img {
-        transform: scale(2.3);
-      }
+      width: 400px;
+      height: 400px;
     }
+  }
 
+  .bigPlantItem.reversed .bigPlantItem__image {
+    width: 400px;
+    height: 400px;
   }
 }
 
 @media (max-width: 992px) {
-  .bigPlantItem{
+  .bigPlantItem {
     flex-direction: column;
     padding: 80px;
-    gap: 50px;
 
     &__image {
-      img {
-        transform: unset;
-      }
+      margin: 0 auto;
     }
 
-    &__buttons  {
+    &__buttons {
       flex-direction: column;
       gap: 30px;
       align-items: center;
       justify-content: center;
+    }
+
+    &.reversed {
+      padding: 80px;
+    }
+  }
+
+  .bigPlantItem.reversed .bigPlantItem__image {
+    margin: 0 auto;
+    img {
+      transform: scale(1.2);
     }
   }
 }
@@ -118,33 +129,27 @@
     }
   }
 
-  .defaultSection {
-    padding: 30px;
-  }
-
-  .bigPlantItem{
+  .bigPlantItem {
     padding: 50px;
-    gap: 30px;
+    gap: 10px;
 
-    &__buttons  {
+    &__buttons {
       gap: 15px;
+    }
+
+    &.reversed {
+      padding: 50px;
     }
   }
 
   .simplePlantItem {
     padding: 50px;
-
-    &__image {
-      img {
-        transform: scale(1.4) translateY(-5%);
-      }
-    }
   }
 }
 
 @media (max-width: 576px) {
   :root {
-    --section-padding: 40px;
+    --section-padding: 20px;
     --section-content-padding: 80px 0 0 0;
   }
 
@@ -170,6 +175,7 @@
         &_main {
           font-size: 45px;
         }
+
         &_big {
           font-size: 30px;
         }
@@ -196,7 +202,47 @@
       bottom: 10%;
     }
   }
+
+  .bigPlantItem {
+
+    &__image {
+      width: 150px;
+      height: 150px;
+
+      img {
+        transform: scale(2.5) translateY(-30px);
+      }
+    }
+
+    &.reversed {
+      padding: 50px 50px 100px 50px;
+      gap: 50px;
+    }
+  }
+
+  .bigPlantItem.reversed .bigPlantItem__image {
+    width: 150px;
+    height: 150px;
+    img {
+      transform: scale(2.5);
+    }
+  }
+
+  .simplePlantItem {
+
+    &__image {
+      width: 150px;
+      height: 150px;
+
+      img {
+        transform: scale(1.5) translateY(-40px);
+      }
+    }
+  }
 }
+
+
+
 
 @media (max-width: 401px) {
   .text {

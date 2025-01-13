@@ -39,13 +39,16 @@ function stopVideo (modal) {
 function initModals() {
     const modalOpenButtons = document.querySelectorAll('[data-modal]')
 
+    modalOpenButtons.forEach(modalOpenButton => console.log(modalOpenButton.dataset.modal))
+
     modalOpenButtons.forEach(modalOpenButton => {
         const modalSelector = modalOpenButton.dataset.modal,
             modal = document.querySelector(`.${modalSelector}`),
-            modalCloseButton = modal.querySelector('.modal__closeButton');
+            modalCloseButtons = modal.querySelectorAll('[data-modal-close]');
 
         modalOpenButton.addEventListener('click', (e) => openModal(e, modal));
-        modalCloseButton.addEventListener('click', (e) => closeModal(e, modal));
+        modalCloseButtons.forEach(modalCloseButtons =>
+            modalCloseButtons.addEventListener('click', (e) => closeModal(e, modal)));
 
         window.addEventListener('keydown', (e) => {
             closeModalOnEscape(e, modal)
@@ -54,6 +57,8 @@ function initModals() {
             closeModalOnOutClick(e, modal);
         });
     })
+
+    console.log('Modal initialization finished!')
 }
 
-export default initModals()
+export default initModals;

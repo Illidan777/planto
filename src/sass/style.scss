@@ -18,6 +18,10 @@
 @import 'modules/footer/footer';
 @import 'modules/footer/media';
 
+@import 'modules/cart/cart';
+@import 'modules/cart/media';
+@import 'modules/toast/toast';
+
 * {
   font-family: 'Inter', sans-serif;
   margin: 0;

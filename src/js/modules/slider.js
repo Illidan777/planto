@@ -71,6 +71,8 @@ function initSliders() {
             return num;
         }
     }
+
+    console.log('Sliders initialization finished!')
 }
 
 export default initSliders;

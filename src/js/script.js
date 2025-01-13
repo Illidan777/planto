@@ -1,10 +1,12 @@
 import initSliders from './modules/slider';
 import initMenu from './modules/menu';
 import initModals from "./modules/modal"
+import renderPlants from "./modules/plant_service";
+import initCart, {initPurchasingButtons} from "./modules/сart_service";
 
-window.addEventListener('DOMContentLoaded', () => {
-
-    initSliders()
-    initMenu()
-    initModals()
-});
+renderPlants()
+initCart()
+initPurchasingButtons()
+initSliders()
+initMenu()
+initModals()

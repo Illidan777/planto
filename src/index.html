@@ -30,690 +30,436 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+<div class="app">
+    <main>
+        <section class="promo">
+            <nav class="promo__header">
+                <div class="logo">
+                    <a href="#"><img src="../img/logo.png" alt="logo"></a>
+                    <span class="text__simple__size_big text__weight_super_bold">Planto.</span>
+                </div>
+                <ul class="promo__header__menu">
+                    <li class="text__simple__size_medium text__weight_light"><a href="#">Home</a></li>
+                    <li class="text__simple__size_medium text__weight_light"><a href="#trendy">Trendy plants</a></li>
+                    <li class="text__simple__size_medium text__weight_light"><a href="#top">Top selling</a></li>
+                    <li class="text__simple__size_medium text__weight_light"><a href="#feedback">Client`s feedback</a></li>
+                    <li class="text__simple__size_medium text__weight_light"><a href="#bestO2">Best O2</a></li>
+                    <li data-modal="contactsModal" class="text__simple__size_medium text__weight_light"><a href="#">Contact</a></li>
+                </ul>
+                <div class="promo__header__toolbar">
+                    <a href="#"><img src="../icons/search.png" alt="search"></a>
+                    <a data-modal="cartModal" href="#"><img src="../icons/bag.png" alt="bag"></a>
+                    <div class="promo__header__menu_hamburger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="promo__subsection_title">
+                <div class="promo__title">
+                    <h1 class="text__title__size_main text__weight_semi_bold">Breath Natureal</h1>
+                    <p class="text__simple__size_medium text__weight_light">Discover the beauty of greenery and bring
+                        nature closer to your home. Explore our collection of vibrant plants and helpful tips to create
+                        your perfect natural oasis.
+                    </p>
+                    <div class="promo__subsection_title__buttons_wrapper">
+                        <button data-modal="headerExploreModal" class="button">Explore</button>
+                        <div class="buttonWithNearTextWrapper">
+                            <button data-modal="headerDemoModal" class="circleButton"><img src="../icons/play.png" alt="play"></button>
+                            <span>Live demo ...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="promo__feedback">
+                    <div class="feedbackItem defaultItemBlock">
+                        <div class="feedbackItem__executor">
+                            <div class="feedbackItem__avatar">
+                                <img src="../img/feedback/commenter1.jpg" alt="commenter1">
+                            </div>
+                            <h3 class="feedbackItem__title text__title__size_small text__weight_regular">alena Patel</h3>
+                            <div class="feedbackItem__rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                        <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
+                            inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
+                    </div>
+                </div>
+                <div class="defaultItemBlock promo__plant-slider slider">
+                    <div class="slider__navigationBlock">
+                        <div class="slider__counter">
+                            <div class="slider__previous-button">
+                                <img src="../icons/left_arrow.svg" alt="left_arrow">
+                            </div>
+                            <span data-nav-slide-number="current" class="text__simple__size_medium text__weight_light"></span>
+                            <span class="text__simple__size_medium text__weight_light">/</span>
+                            <span data-nav-slide-number="total" class="text__simple__size_medium text__weight_light"></span>
+                            <div class="slider__next-button">
+                                <img src="../icons/right_arrow.svg" alt="right_arrow">
+                            </div>
+                        </div>
+                        <div class="slider__navigationBar">
+                            <div class="slider__navigationBar__item"></div>
+                            <div class="slider__navigationBar__item"></div>
+                            <div class="slider__navigationBar__item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<main>
-    <section class="promo">
-        <nav class="promo__header">
-            <div class="logo">
-                <a href="#"><img src="../img/logo.png" alt="logo"></a>
-                <span class="text__simple__size_big text__weight_super_bold">Planto.</span>
-            </div>
-            <ul class="promo__header__menu">
-                <li class="text__simple__size_medium text__weight_light"><a href="#">Home</a></li>
-                <li class="text__simple__size_medium text__weight_light"><a href="#trendy">Trendy plants</a></li>
-                <li class="text__simple__size_medium text__weight_light"><a href="#top">Top selling</a></li>
-                <li class="text__simple__size_medium text__weight_light"><a href="#feedback">Client`s feedback</a></li>
-                <li class="text__simple__size_medium text__weight_light"><a href="#bestO2">Best O2</a></li>
-                <li data-modal="contactsModal" class="text__simple__size_medium text__weight_light"><a href="#">Contact</a></li>
-            </ul>
-            <div class="promo__header__toolbar">
-                <a href="#"><img src="../icons/search.png" alt="search"></a>
-                <a href="#"><img src="../icons/bag.png" alt="bag"></a>
-                <div class="promo__header__menu_hamburger">
-                    <span></span>
-                    <span></span>
+            <div id="trendy" class="promo__trendyPlants defaultSection">
+                <div class="defaultSection__title">
+                    <div class="defaultSection__title-icon">
+                        <img src="../icons/title/plant_icon1.svg" alt="planto">
+                    </div>
+                    <h2 class="text__title__size_big text__weight_semi_bold">Our Trendy plants</h2>
+                </div>
+                <div class="defaultSection__content promo__trendyPlants_itemWrapper">
                 </div>
             </div>
-        </nav>
-        <div class="promo__subsection_title">
-            <div class="promo__title">
-                <h1 class="text__title__size_main text__weight_semi_bold">Breath Natureal</h1>
-                <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                    eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                    rerum saepe sequi velit.
-                </p>
-                <div class="promo__subsection_title__buttons_wrapper">
-                    <button data-modal="headerExploreModal" class="button">Explore</button>
-                    <div class="buttonWithNearTextWrapper">
-                        <button data-modal="headerDemoModal" class="circleButton"><img src="../icons/play.png" alt="play"></button>
-                        <span>Live demo ...</span>
-                    </div>
-                </div>
-            </div>
-            <div class="promo__feedback">
-                <div class="feedbackItem defaultItemBlock">
-                    <div class="feedbackItem__executor">
-                        <div class="feedbackItem__avatar">
-                            <img src="../img/feedback/commenter1.jpg" alt="commenter1">
-                        </div>
-                        <h3 class="feedbackItem__title text__title__size_small text__weight_regular">alena Patel</h3>
-                        <div class="feedbackItem__rate">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
-                        inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
-                </div>
-            </div>
-            <div class="defaultItemBlock promo__plant-slider slider">
-                <div class="promo__plant-slider-item slider__item simplePlantItem">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant1.png" alt="plant1">
-                    </div>
-                    <div class="simplePlantItem__infoBlock">
-                        <span class="text__simple__size_medium text__weight_light">Trendy House Plant</span>
-                        <div class="text__title__size_medium text__weight_regular">
-                            Calathea plant
-                        </div>
-                        <button>Buy now</button>
-                    </div>
-                </div>
-                <div class="promo__plant-slider-item slider__item simplePlantItem">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant5.png" alt="plant1">
-                    </div>
-                    <div class="simplePlantItem__infoBlock">
-                        <span class="text__simple__size_medium text__weight_light">Modern Office Plant</span>
-                        <div class="text__title__size_medium text__weight_regular">
-                            Jojo plant
-                        </div>
-                        <button>Buy now</button>
-                    </div>
-                </div>
-                <div class="promo__plant-slider-item slider__item simplePlantItem">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant7.png" alt="plant1">
-                    </div>
-                    <div class="simplePlantItem__infoBlock">
-                        <span class="text__simple__size_medium text__weight_light">Best for Kids</span>
-                        <div class="text__title__size_medium text__weight_regular">
-                            Kiddy planty
-                        </div>
-                        <button>Buy now</button>
-                    </div>
-                </div>
-                <div class="slider__counter">
-                    <div class="slider__previous-button">
-                        <img src="../icons/left_arrow.svg" alt="left_arrow">
-                    </div>
-                    <span data-nav-slide-number="current" class="text__simple__size_medium text__weight_light"></span>
-                    <span class="text__simple__size_medium text__weight_light">/</span>
-                    <span data-nav-slide-number="total" class="text__simple__size_medium text__weight_light"></span>
-                    <div class="slider__next-button">
-                        <img src="../icons/right_arrow.svg" alt="right_arrow">
-                    </div>
-                </div>
-                <div class="slider__navigationBar">
-                    <div class="slider__navigationBar__item"></div>
-                    <div class="slider__navigationBar__item"></div>
-                    <div class="slider__navigationBar__item"></div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div id="trendy" class="promo__trendyPlants defaultSection">
+        <section id="top" class="topSelling defaultSection">
             <div class="defaultSection__title">
                 <div class="defaultSection__title-icon">
-                    <img src="../icons/title/plant_icon1.svg" alt="planto">
+                    <img src="../icons/title/plant_icon2.svg" alt="planto">
                 </div>
-                <h2 class="text__title__size_big text__weight_semi_bold">Our Trendy plants</h2>
+                <h2 class="text__title__size_big text__weight_semi_bold">Our Top Selling</h2>
             </div>
-            <div class="defaultSection__content promo__trendyPlants_itemWrapper">
-                <div class="bigPlantItem defaultItemBlock">
-                    <div class="bigPlantItem__image">
-                        <img src="../img/plants/plant2.png" alt="plant2">
-                    </div>
-                    <div class="bigPlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_regular">For small Decs Ai Plat</h3>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <h3 class="text__title__size_medium text__weight_regular">Rs. 599/-</h3>
-                        <div class="bigPlantItem__buttons">
-                            <button data-modal="plantModal_1">Explore</button>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="bigPlantItem defaultItemBlock">
-                    <div class="bigPlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_regular">For small Decs Ai Plat</h3>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <h3 class="text__title__size_medium text__weight_regular">Rs. 579/-</h3>
-                        <div class="bigPlantItem__buttons">
-                            <button>Explore</button>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
-                        </div>
-                    </div>
-                    <div class="bigPlantItem__image oppositePosition">
-                        <img src="../img/plants/plant3.png" alt="plant3">
-                    </div>
+            <div class="defaultSection__content">
+                <div class="topSelling__topPlants">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="top" class="topSelling defaultSection">
-        <div class="defaultSection__title">
-            <div class="defaultSection__title-icon">
-                <img src="../icons/title/plant_icon2.svg" alt="planto">
+        <section id="feedback" class="feedback defaultSection">
+            <div class="defaultSection__title">
+                <div class="defaultSection__title-icon">
+                    <img src="../icons/title/plant_icon3.svg" alt="planto">
+                </div>
+                <h2 class="text__title__size_big text__weight_semi_bold">Customer Review</h2>
             </div>
-            <h2 class="text__title__size_big text__weight_semi_bold">Our Top Selling</h2>
-        </div>
-        <div class="defaultSection__content">
-            <div class="topSelling__topPlants">
-                <div class="topSelling__item simplePlantItem defaultItemBlock">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant1.png" alt="plant1">
-                    </div>
-                    <div class="topSelling__item_info simplePlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_light">Calathea plant</h3>
-                        <span class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Beatae corporis delectus quidem quod ratione!</span>
-                        <div class="topSelling__item_purchase">
-                            <span class="text__title__size_medium text__weight_light">Rs. 359/-</span>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
+            <div class="defaultSection__content">
+                <div class="feedback__wrapper">
+                    <div class="feedbackItem defaultItemBlock">
+                        <div class="feedbackItem__executor">
+                            <div class="feedbackItem__avatar">
+                                <img src="../img/feedback/commenter1.jpg" alt="commenter1">
+                            </div>
+                            <h3 class="feedbackItem__title text__title__size_small text__weight_regular">alena Patel</h3>
+                            <div class="feedbackItem__rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
                         </div>
+                        <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
+                            inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
                     </div>
-                </div>
-                <div class="topSelling__item simplePlantItem defaultItemBlock">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant2.png" alt="plant2">
-                    </div>
-                    <div class="topSelling__item_info simplePlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_light">Calathea plant</h3>
-                        <span class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Beatae corporis delectus quidem quod ratione!</span>
-                        <div class="topSelling__item_purchase">
-                            <span class="text__title__size_medium text__weight_light">Rs. 359/-</span>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
+                    <div class="feedbackItem defaultItemBlock">
+                        <div class="feedbackItem__executor">
+                            <div class="feedbackItem__avatar">
+                                <img src="../img/feedback/commenter2.jpg" alt="commenter2">
+                            </div>
+                            <h3 class="feedbackItem__title text__title__size_small text__weight_regular">venely k</h3>
+                            <div class="feedbackItem__rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
                         </div>
+                        <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
+                            inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
                     </div>
-                </div>
-                <div class="topSelling__item simplePlantItem defaultItemBlock">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant7.png" alt="plant7">
-                    </div>
-                    <div class="topSelling__item_info simplePlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_light">Calathea plant</h3>
-                        <span class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Beatae corporis delectus quidem quod ratione!</span>
-                        <div class="topSelling__item_purchase">
-                            <span class="text__title__size_medium text__weight_light">Rs. 359/-</span>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
+                    <div class="feedbackItem defaultItemBlock">
+                        <div class="feedbackItem__executor">
+                            <div class="feedbackItem__avatar">
+                                <img src="../img/feedback/commenter3.jpg" alt="commenter3">
+                            </div>
+                            <h3 class="feedbackItem__title text__title__size_small text__weight_regular">Lii thakur</h3>
+                            <div class="feedbackItem__rate">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="topSelling__item simplePlantItem defaultItemBlock">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant4.png" alt="plant4">
-                    </div>
-                    <div class="topSelling__item_info simplePlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_light">Calathea plant</h3>
-                        <span class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Beatae corporis delectus quidem quod ratione!</span>
-                        <div class="topSelling__item_purchase">
-                            <span class="text__title__size_medium text__weight_light">Rs. 359/-</span>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="topSelling__item simplePlantItem defaultItemBlock">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant5.png" alt="plant5">
-                    </div>
-                    <div class="topSelling__item_info simplePlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_light">Calathea plant</h3>
-                        <span class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Beatae corporis delectus quidem quod ratione!</span>
-                        <div class="topSelling__item_purchase">
-                            <span class="text__title__size_medium text__weight_light">Rs. 359/-</span>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="topSelling__item simplePlantItem defaultItemBlock">
-                    <div class="simplePlantItem__image">
-                        <img src="../img/plants/plant6.png" alt="plant6">
-                    </div>
-                    <div class="topSelling__item_info simplePlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_light">Calathea plant</h3>
-                        <span class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Beatae corporis delectus quidem quod ratione!</span>
-                        <div class="topSelling__item_purchase">
-                            <span class="text__title__size_medium text__weight_light">Rs. 359/-</span>
-                            <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
-                        </div>
+                        <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
+                            inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="feedback" class="feedback defaultSection">
-        <div class="defaultSection__title">
-            <div class="defaultSection__title-icon">
-                <img src="../icons/title/plant_icon3.svg" alt="planto">
+        <section id="bestO2" class="bestO2 defaultSection">
+            <div class="defaultSection__title">
+                <div class="defaultSection__title-icon">
+                    <img src="../icons/title/plant_icon4.svg" alt="planto">
+                </div>
+                <h2 class="text__title__size_big text__weight_semi_bold">Our Best o2</h2>
             </div>
-            <h2 class="text__title__size_big text__weight_semi_bold">Customer Review</h2>
-        </div>
-        <div class="defaultSection__content">
-            <div class="feedback__wrapper">
-                <div class="feedbackItem defaultItemBlock">
-                    <div class="feedbackItem__executor">
-                        <div class="feedbackItem__avatar">
-                            <img src="../img/feedback/commenter1.jpg" alt="commenter1">
+            <div class="defaultSection__content">
+                <div class="bestO2-slider slider">
+                    <div class="slider__counter">
+                        <div class="slider__previous-button">
+                            <img src="../icons/left_arrow.svg" alt="left_arrow">
                         </div>
-                        <h3 class="feedbackItem__title text__title__size_small text__weight_regular">alena Patel</h3>
-                        <div class="feedbackItem__rate">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
+                        <span data-nav-slide-number="current" class="text__simple__size_medium text__weight_light"></span>
+                        <span class="text__simple__size_medium text__weight_light">/</span>
+                        <span data-nav-slide-number="total" class="text__simple__size_medium text__weight_light"></span>
+                        <div class="slider__next-button">
+                            <img src="../icons/right_arrow.svg" alt="right_arrow">
                         </div>
                     </div>
-                    <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
-                        inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
-                </div>
-                <div class="feedbackItem defaultItemBlock">
-                    <div class="feedbackItem__executor">
-                        <div class="feedbackItem__avatar">
-                            <img src="../img/feedback/commenter2.jpg" alt="commenter2">
-                        </div>
-                        <h3 class="feedbackItem__title text__title__size_small text__weight_regular">venely k</h3>
-                        <div class="feedbackItem__rate">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
+                    <div class="slider__navigationBar">
+                        <div class="slider__navigationBar__item"></div>
+                        <div class="slider__navigationBar__item"></div>
+                        <div class="slider__navigationBar__item"></div>
                     </div>
-                    <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
-                        inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
-                </div>
-                <div class="feedbackItem defaultItemBlock">
-                    <div class="feedbackItem__executor">
-                        <div class="feedbackItem__avatar">
-                            <img src="../img/feedback/commenter3.jpg" alt="commenter3">
-                        </div>
-                        <h3 class="feedbackItem__title text__title__size_small text__weight_regular">Lii thakur</h3>
-                        <div class="feedbackItem__rate">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Accusamus adipisci alias, cupiditate dignissimos dolor doloribus exercitationem
-                        inventore iusto maiores modi nihil odio omnis placeat porro quidem sunt vero. Fuga, quaerat.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="bestO2" class="bestO2 defaultSection">
-        <div class="defaultSection__title">
-            <div class="defaultSection__title-icon">
-                <img src="../icons/title/plant_icon4.svg" alt="planto">
+    <footer class="footerWrapper">
+        <section class="footer defaultSection">
+            <div class="footer__description">
+                <div class="logo">
+                    <a href="#"><img src="../img/logo.png" alt="logo"></a>
+                    <span class="text__title__size_medium text__weight_super_bold">Planto.</span>
+                </div>
+                <p class="text__simple__size_small text__weight_light">Growing happiness, one plant at a time. Thank
+                    you for letting us be part of your journey toward a greener, more natural lifestyle. Your trusted
+                    companion in bringing nature indoors. Let's create spaces that breathe, grow, and thrive together.
+                </p>
             </div>
-            <h2 class="text__title__size_big text__weight_semi_bold">Our Best o2</h2>
-        </div>
-        <div class="defaultSection__content">
-            <div class="bestO2-slider defaultItemBlock slider">
-                <div class="slider__item bigPlantItem">
-                    <div class="bigPlantItem__image">
-                        <img src="../img/plants/plant2.png" alt="plant2">
-                    </div>
-                    <div class="bigPlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_regular">We Have Small And Best O2 Plants Collection’s</h3>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <div class="bigPlantItem__buttons">
-                            <button class="button">Explore</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__item bigPlantItem">
-                    <div class="bigPlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_regular">We Have Small And Best O2 Plants Collection’s</h3>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <div class="bigPlantItem__buttons">
-                            <button class="button">Explore</button>
-                        </div>
-                    </div>
-                    <div class="bigPlantItem__image">
-                        <img src="../img/plants/plant7.png" alt="plant2">
-                    </div>
-                </div>
-                <div class="slider__item bigPlantItem">
-                    <div class="bigPlantItem__image">
-                        <img src="../img/plants/plant3.png" alt="plant2">
-                    </div>
-                    <div class="bigPlantItem__infoBlock">
-                        <h3 class="text__title__size_medium text__weight_regular">We Have Small And Best O2 Plants Collection’s</h3>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <p class="text__simple__size_medium text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut consequatur cupiditate deserunt
-                            eveniet illo ipsum iure maxime molestiae mollitia natus nobis, officia pariatur, praesentium quasi
-                            rerum saepe sequi velit.
-                        </p>
-                        <div class="bigPlantItem__buttons">
-                            <button class="button">Explore</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__counter">
-                    <div class="slider__previous-button">
-                        <img src="../icons/left_arrow.svg" alt="left_arrow">
-                    </div>
-                    <span data-nav-slide-number="current" class="text__simple__size_medium text__weight_light"></span>
-                    <span class="text__simple__size_medium text__weight_light">/</span>
-                    <span data-nav-slide-number="total" class="text__simple__size_medium text__weight_light"></span>
-                    <div class="slider__next-button">
-                        <img src="../icons/right_arrow.svg" alt="right_arrow">
-                    </div>
-                </div>
-                <div class="slider__navigationBar">
-                    <div class="slider__navigationBar__item"></div>
-                    <div class="slider__navigationBar__item"></div>
-                    <div class="slider__navigationBar__item"></div>
-                </div>
+            <div class="footer__links">
+                <h3 class="text__title__size_medium text__weight_regular">Quick Link`s</h3>
+                <ul class="text__simple__size_small text__weight_light listStyle1">
+                    <li class="text__simple__size_small text__weight_light"><a href="#">Home</a></li>
+                    <li class="text__simple__size_small text__weight_light"><a href="#trendy">Trendy plants</a></li>
+                    <li class="text__simple__size_small text__weight_light"><a href="#top">Top selling</a></li>
+                    <li class="text__simple__size_small text__weight_light"><a href="#feedback">Client`s feedback</a></li>
+                    <li class="text__simple__size_small text__weight_light"><a href="#bestO2">Best O2</a></li>
+                    <li data-modal="contactsModal" class="text__simple__size_small text__weight_light"><a href="#">Contact</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
-</main>
+            <div class="footer__form">
+                <h3 class="text__title__size_medium text__weight_regular">For Every Update.</h3>
+                <div class="inputWithButton">
+                    <input type="text" placeholder="Enter email">
+                    <button>Subscribe</button>
+                </div>
+                <span class="text__simple__size_small text__weight_light">planto © all right reserve</span>
+            </div>
+        </section>
+    </footer>
 
-<footer class="footerWrapper">
-    <section class="footer">
-        <div class="footer__description">
-            <div class="logo">
-                <a href="#"><img src="../img/logo.png" alt="logo"></a>
-                <span class="text__title__size_medium text__weight_super_bold">Planto.</span>
+    <div class="modal headerDemoModal">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h2 class="text__title__size_medium text__weight_regular">Live demo about Planto.</h2>
+                <div data-modal-close class="modal__closeButton">
+                    <img src="../icons/close_icon.png" alt="close">
+                </div>
             </div>
-            <p class="text__simple__size_small text__weight_light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ad doloremque dolores eum ex iste laudantium magni nam qui ratione, reprehenderit sit totam veritatis.
-                Doloremque ea explicabo laboriosam neque voluptas voluptatem.
-            </p>
-        </div>
-        <div class="footer__links">
-            <h3 class="text__title__size_medium text__weight_regular">Quick Link`s</h3>
-            <ul class="text__simple__size_small text__weight_light listStyle1">
-                <li class="text__simple__size_small text__weight_light"><a href="#">Home</a></li>
-                <li class="text__simple__size_small text__weight_light"><a href="#trendy">Trendy plants</a></li>
-                <li class="text__simple__size_small text__weight_light"><a href="#top">Top selling</a></li>
-                <li class="text__simple__size_small text__weight_light"><a href="#feedback">Client`s feedback</a></li>
-                <li class="text__simple__size_small text__weight_light"><a href="#bestO2">Best O2</a></li>
-                <li data-modal="contactsModal" class="text__simple__size_small text__weight_light"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer__form">
-            <h3 class="text__title__size_medium text__weight_regular">For Every Update.</h3>
-            <div class="inputWithButton">
-                <input type="text" placeholder="Enter email">
-                <button>Subscribe</button>
+            <div class="modal__content">
+                <iframe
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                </iframe>
             </div>
-            <span class="text__simple__size_small text__weight_light">planto © all right reserve</span>
-        </div>
-    </section>
-</footer>
-
-<div class="modal headerDemoModal">
-    <div class="modal__dialog">
-        <div class="modal__header">
-            <h2 class="text__title__size_medium text__weight_regular">Live demo about Planto.</h2>
-            <div class="modal__closeButton">
-                <img src="../icons/close_icon.png" alt="close">
+            <div class="modal__footer">
+                <img src="../img/plants/modal_plant.png" alt="plant">
+                <img src="../img/plants/modal_plant.png" alt="plant">
             </div>
-        </div>
-        <div class="modal__content">
-            <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen>
-            </iframe>
-        </div>
-        <div class="modal__footer">
-            <img src="../img/plants/modal_plant.png" alt="plant">
-            <img src="../img/plants/modal_plant.png" alt="plant">
         </div>
     </div>
-</div>
 
-<div class="modal headerExploreModal">
-    <div class="modal__dialog">
-        <div class="modal__header">
-            <h2 class="text__title__size_medium text__weight_regular">Welcome to the Green World of Planto.</h2>
-            <div class="modal__closeButton">
-                <img src="../icons/close_icon.png" alt="close">
-            </div>
-        </div>
-        <div class="modal__content promo__aboutUs">
-            <div class="promo__aboutUs_infoBlock">
-                <p class="text__simple__size_small text__weight_thin">
-                    Thank you for visiting us! We believe you’re here for a reason. At our store, you’ll find more than
-                    just plants—you’ll find green companions that will become a part of your life.
-                </p>
-            </div>
-            <hr>
-            <div class="promo__aboutUs_infoBlock">
-                <h3 class="text__simple__size_big text__weight_medium">Who we are and what we offer?</h3>
-                <p class="text__simple__size_small text__weight_thin">
-                    Thank you for visiting us! We believe you’re here for a reason. At our store, you’ll find more than
-                    just plants—you’ll find green companions that will become a part of your life.
-                </p>
-                <ul class="listStyle1">
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">Premium Quality Plants: </span><span class="text__simple__size_small text__weight_thin">Carefully selected from trusted suppliers.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">Care Guidance: </span><span class="text__simple__size_small text__weight_thin">Detailed instructions to keep your plants thriving.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">Eco-Friendly Delivery: </span><span class="text__simple__size_small text__weight_thin">Convenient and sustainable, right to your doorstep.</span>
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <div class="promo__aboutUs_infoBlock">
-                <h3 class="text__simple__size_big text__weight_medium">Why Choose Us?</h3>
-                <ul class="listStyle2">
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">Personalized Recommendations: </span><span class="text__simple__size_small text__weight_thin">We understand that every customer is unique, just like every plant. Our experts will help you choose plants that fit perfectly into your space and lifestyle.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">Quality Assurance: </span><span class="text__simple__size_small text__weight_thin">Every plant is inspected to ensure it brings joy for years to come.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">Sustainability: </span><span class="text__simple__size_small text__weight_thin">We care for the planet: recycled pots, eco-friendly packaging, and mindful practices.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">Post-Purchase Support: </span><span class="text__simple__size_small text__weight_thin">Have questions? We're here to guide you every step of the way.</span>
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <div class="promo__aboutUs_infoBlock">
-                <h3 class="text__simple__size_big text__weight_medium">Find your perfect plant!</h3>
-                <p class="text__simple__size_small text__weight_thin">
-                    Not sure what to pick? We’re here to help!
-                </p>
-                <ul class="listStyle3">
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">For Your Home: </span><span class="text__simple__size_small text__weight_thin">Transform any room into a cozy oasis with decorative plants like Ficus, Monstera, or Peace Lily.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">For Your Office: </span><span class="text__simple__size_small text__weight_thin">Looking for something low-maintenance? ZZ Plant and Snake Plant make great green accents for workspaces.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_medium">For Your Garden: </span><span class="text__simple__size_small text__weight_thin">Elevate your outdoor space with vibrant shrubs, trees, and flowering plants.</span>
-                    </li>
-                </ul>
-                <p class="text__simple__size_small text__weight_thin">
-                    Need help deciding?
-                    Our Plant Selector Tool can recommend the best plants based on light, humidity, and care preferences.
-                </p>
-            </div>
-            <hr>
-            <div class="promo__aboutUs_infoBlock">
-                <h3 class="text__simple__size_big text__weight_medium">Why Plants Are Special?</h3>
-                <p class="text__simple__size_small text__weight_thin">
-                    Every plant has its charm. Did you know?
-                </p>
-                <ul class="listStyle4">
-                    <li>
-                        <span class="text__simple__size_small text__weight_thin">Monstera can purify air by filtering harmful substances.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_thin">Succulents are perfect for busy people, as they thrive on minimal care.</span>
-                    </li>
-                    <li>
-                        <span class="text__simple__size_small text__weight_thin">Some plants, like Lavender and Aloe Vera, even have medicinal properties.</span>
-                    </li>
-                </ul>
-                <p class="text__simple__size_small text__weight_thin">
-                    With each purchase, you’ll receive care instructions to ensure your green friends thrive.
-                </p>
-            </div>
-            <hr>
-            <div class="promo__aboutUs_infoBlock">
-                <h3 class="text__simple__size_big text__weight_medium">The Story of Our Shop</h3>
-                <p class="text__simple__size_small text__weight_thin">
-                    Once upon a time, we were just plant enthusiasts creating cozy corners in our homes.
-                    Today, Planto. is a team of nature lovers eager to share our passion for greenery. We started with
-                    a small collection of succulents and grew into a store offering hundreds of plant varieties.
-                    We’re proud that our mission inspires thousands of people
-                </p>
-            </div>
-            <hr>
-        </div>
-        <div class="modal__footer">
-            <img src="../img/plants/modal_plant.png" alt="plant">
-            <img src="../img/plants/modal_plant.png" alt="plant">
-        </div>
-    </div>
-</div>
-
-<div class="modal contactsModal">
-    <div class="modal__dialog">
-        <div class="modal__header">
-            <h2 class="text__title__size_medium text__weight_regular">Contact us</h2>
-            <div class="modal__closeButton">
-                <img src="../icons/close_icon.png" alt="close">
-            </div>
-        </div>
-        <div class="modal__content promo__header__menu-contacts">
-            <div class="promo__header__menu-contacts__item">
-                <img src="../icons/contacts/map.svg" alt="map">
-                <span class="text__simple__size_medium text__weight_light">123 Anywhere St., Any City, ST 12345</span>
-            </div>
-            <div class="promo__header__menu-contacts__item">
-                <img src="../icons/contacts/envelope.svg" alt="envelope">
-                <span class="text__simple__size_medium text__weight_light">hello@reallygreatsite.com</span>
-            </div>
-            <div class="promo__header__menu-contacts__item">
-                <img src="../icons/contacts/phone.svg" alt="phone">
-                <span class="text__simple__size_medium text__weight_light">123-456-7890</span>
-            </div>
-            <div class="promo__header__menu-contacts__item">
-                <img src="../icons/contacts/web.svg" alt="phone">
-                <span class="text__simple__size_medium text__weight_light"><a href="#">www.reallygreatsite.com</a></span>
-            </div>
-        </div>
-        <div class="modal__footer">
-            <img src="../img/plants/modal_plant.png" alt="plant">
-            <img src="../img/plants/modal_plant.png" alt="plant">
-        </div>
-    </div>
-</div>
-
-<div class="modal plantModal_1">
-    <div class="modal__dialog">
-        <div class="modal__header">
-            <h2 class="text__title__size_medium text__weight_regular">Plant 1</h2>
-            <div class="modal__closeButton">
-                <img src="../icons/close_icon.png" alt="close">
-            </div>
-        </div>
-        <div class="modal__content">
-            <div class="plantCard">
-                <div class="plantCard__image">
-                    <img src="../img/plants/plant2.png" alt="plant1">
+    <div class="modal headerExploreModal">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h2 class="text__title__size_medium text__weight_regular">Welcome to the Green World of Planto.</h2>
+                <div data-modal-close class="modal__closeButton">
+                    <img src="../icons/close_icon.png" alt="close">
                 </div>
-                <div class="plantCard__price text__simple__size_big text__weight_medium">
-                    Rs. 599/
+            </div>
+            <div class="modal__content promo__aboutUs">
+                <div class="promo__aboutUs_infoBlock">
+                    <p class="text__simple__size_small text__weight_thin">
+                        Thank you for visiting us! We believe you’re here for a reason. At our store, you’ll find more than
+                        just plants—you’ll find green companions that will become a part of your life.
+                    </p>
                 </div>
-                <div class="plantCard__info text__simple__size_small text__weight_thin">
-                    <ul class="plantCard__characteristics">
-                        <li class="plantCard__characteristics_item">
-                            <span>Size</span>
-                            <span>10 x 20 x 30</span>
+                <hr>
+                <div class="promo__aboutUs_infoBlock">
+                    <h3 class="text__simple__size_big text__weight_medium">Who we are and what we offer?</h3>
+                    <p class="text__simple__size_small text__weight_thin">
+                        Thank you for visiting us! We believe you’re here for a reason. At our store, you’ll find more than
+                        just plants—you’ll find green companions that will become a part of your life.
+                    </p>
+                    <ul class="listStyle1">
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">Premium Quality Plants: </span><span class="text__simple__size_small text__weight_thin">Carefully selected from trusted suppliers.</span>
                         </li>
-                        <li class="plantCard__characteristics_item">
-                            <span>Temperature Range</span>
-                            <span>18-24</span>
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">Care Guidance: </span><span class="text__simple__size_small text__weight_thin">Detailed instructions to keep your plants thriving.</span>
                         </li>
-                        <li class="plantCard__characteristics_item">
-                            <span>Type</span>
-                            <span>Outdoor</span>
-                        </li>
-                        <li class="plantCard__characteristics_item">
-                            <span>Care type</span>
-                            <span>MEDIUM</span>
-                        </li>
-                        <li class="plantCard__characteristics_item">
-                            <span>Irrigation type</span>
-                            <span>MODERATE</span>
-                        </li>
-                        <li class="plantCard__characteristics_item">
-                            <span>Light type</span>
-                            <span>PARTIAL_SHADE</span>
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">Eco-Friendly Delivery: </span><span class="text__simple__size_small text__weight_thin">Convenient and sustainable, right to your doorstep.</span>
                         </li>
                     </ul>
-                    <div class="plantCard__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae
-                        earum illum ipsa nobis quae qui sed! Dolore, eum expedita fugiat maxime quaerat
-                        quibusdam sed sint. Consequuntur rem tempore ullam.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae
-                        earum illum ipsa nobis quae qui sed! Dolore, eum expedita fugiat maxime quaerat
-                        quibusdam sed sint. Consequuntur rem tempore ullam.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae
-                        earum illum ipsa nobis quae qui sed! Dolore, eum expedita fugiat maxime quaerat
-                        quibusdam sed sint. Consequuntur rem tempore ullam.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae
-                        earum illum ipsa nobis quae qui sed! Dolore, eum expedita fugiat maxime quaerat
-                        quibusdam sed sint. Consequuntur rem tempore ullam.
-                    </div>
                 </div>
-                <button>Buy now</button>
+                <hr>
+                <div class="promo__aboutUs_infoBlock">
+                    <h3 class="text__simple__size_big text__weight_medium">Why Choose Us?</h3>
+                    <ul class="listStyle2">
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">Personalized Recommendations: </span><span class="text__simple__size_small text__weight_thin">We understand that every customer is unique, just like every plant. Our experts will help you choose plants that fit perfectly into your space and lifestyle.</span>
+                        </li>
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">Quality Assurance: </span><span class="text__simple__size_small text__weight_thin">Every plant is inspected to ensure it brings joy for years to come.</span>
+                        </li>
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">Sustainability: </span><span class="text__simple__size_small text__weight_thin">We care for the planet: recycled pots, eco-friendly packaging, and mindful practices.</span>
+                        </li>
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">Post-Purchase Support: </span><span class="text__simple__size_small text__weight_thin">Have questions? We're here to guide you every step of the way.</span>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="promo__aboutUs_infoBlock">
+                    <h3 class="text__simple__size_big text__weight_medium">Find your perfect plant!</h3>
+                    <p class="text__simple__size_small text__weight_thin">
+                        Not sure what to pick? We’re here to help!
+                    </p>
+                    <ul class="listStyle3">
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">For Your Home: </span><span class="text__simple__size_small text__weight_thin">Transform any room into a cozy oasis with decorative plants like Ficus, Monstera, or Peace Lily.</span>
+                        </li>
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">For Your Office: </span><span class="text__simple__size_small text__weight_thin">Looking for something low-maintenance? ZZ Plant and Snake Plant make great green accents for workspaces.</span>
+                        </li>
+                        <li>
+                            <span class="text__simple__size_small text__weight_medium">For Your Garden: </span><span class="text__simple__size_small text__weight_thin">Elevate your outdoor space with vibrant shrubs, trees, and flowering plants.</span>
+                        </li>
+                    </ul>
+                    <p class="text__simple__size_small text__weight_thin">
+                        Need help deciding?
+                        Our Plant Selector Tool can recommend the best plants based on light, humidity, and care preferences.
+                    </p>
+                </div>
+                <hr>
+                <div class="promo__aboutUs_infoBlock">
+                    <h3 class="text__simple__size_big text__weight_medium">Why Plants Are Special?</h3>
+                    <p class="text__simple__size_small text__weight_thin">
+                        Every plant has its charm. Did you know?
+                    </p>
+                    <ul class="listStyle4">
+                        <li>
+                            <span class="text__simple__size_small text__weight_thin">Monstera can purify air by filtering harmful substances.</span>
+                        </li>
+                        <li>
+                            <span class="text__simple__size_small text__weight_thin">Succulents are perfect for busy people, as they thrive on minimal care.</span>
+                        </li>
+                        <li>
+                            <span class="text__simple__size_small text__weight_thin">Some plants, like Lavender and Aloe Vera, even have medicinal properties.</span>
+                        </li>
+                    </ul>
+                    <p class="text__simple__size_small text__weight_thin">
+                        With each purchase, you’ll receive care instructions to ensure your green friends thrive.
+                    </p>
+                </div>
+                <hr>
+                <div class="promo__aboutUs_infoBlock">
+                    <h3 class="text__simple__size_big text__weight_medium">The Story of Our Shop</h3>
+                    <p class="text__simple__size_small text__weight_thin">
+                        Once upon a time, we were just plant enthusiasts creating cozy corners in our homes.
+                        Today, Planto. is a team of nature lovers eager to share our passion for greenery. We started with
+                        a small collection of succulents and grew into a store offering hundreds of plant varieties.
+                        We’re proud that our mission inspires thousands of people
+                    </p>
+                </div>
+                <hr>
+            </div>
+            <div class="modal__footer">
+                <img src="../img/plants/modal_plant.png" alt="plant">
+                <img src="../img/plants/modal_plant.png" alt="plant">
             </div>
         </div>
-        <div class="modal__footer">
-            <img src="../img/plants/modal_plant.png" alt="plant">
-            <img src="../img/plants/modal_plant.png" alt="plant">
+    </div>
+
+    <div class="modal contactsModal">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h2 class="text__title__size_medium text__weight_regular">Contact us</h2>
+                <div data-modal-close class="modal__closeButton">
+                    <img src="../icons/close_icon.png" alt="close">
+                </div>
+            </div>
+            <div class="modal__content promo__header__menu-contacts">
+                <div class="promo__header__menu-contacts__item">
+                    <img src="../icons/contacts/map.svg" alt="map">
+                    <span class="text__simple__size_medium text__weight_light">123 Anywhere St., Any City, ST 12345</span>
+                </div>
+                <div class="promo__header__menu-contacts__item">
+                    <img src="../icons/contacts/envelope.svg" alt="envelope">
+                    <span class="text__simple__size_medium text__weight_light">hello@reallygreatsite.com</span>
+                </div>
+                <div class="promo__header__menu-contacts__item">
+                    <img src="../icons/contacts/phone.svg" alt="phone">
+                    <span class="text__simple__size_medium text__weight_light">123-456-7890</span>
+                </div>
+                <div class="promo__header__menu-contacts__item">
+                    <img src="../icons/contacts/web.svg" alt="phone">
+                    <span class="text__simple__size_medium text__weight_light"><a href="#">www.reallygreatsite.com</a></span>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <img src="../img/plants/modal_plant.png" alt="plant">
+                <img src="../img/plants/modal_plant.png" alt="plant">
+            </div>
         </div>
     </div>
-</div>
 
+    <div class="modal cartModal">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h2 class="text__title__size_medium text__weight_regular">Added to Your Cart</h2>
+                <div data-modal-close class="modal__closeButton">
+                    <img src="../icons/close_icon.png" alt="close">
+                </div>
+            </div>
+            <div class="modal__content">
+                <div class="cart">
+                </div>
+            </div>
+            <div class="modal__footer">
+                <img src="../img/plants/modal_plant.png" alt="plant">
+                <img src="../img/plants/modal_plant.png" alt="plant">
+            </div>
+        </div>
+    </div>
+
+    <div class="toast">
+    </div>
+
+</div>
 <script src="js/bundle.js"></script>
 </body>
 </html>

@@ -124,7 +124,7 @@
   .promo {
 
     &__plant-slider {
-      padding: 50px;
+      padding: 50px 50px 0 50px;
     }
   }
 }
@@ -132,7 +132,6 @@
 @media (max-width: 576px) {
   .promo {
     &__header {
-      padding: 20px;
 
       &__menu {
         width: 70%;
@@ -151,7 +150,6 @@
       }
     }
     &__subsection_title {
-      padding: 20px;
       display: flex;
       flex-direction: column;
       gap: 60px;
