@@ -91,7 +91,7 @@ function renderPlantCard(plant, container, plantFullInfoModalId) {
                             <span class="text__simple__size_big text__weight_regular">Rs. ${plant.price}/-</span>
                             <div class="topSelling__item_purchase__btns"> 
                                 <button data-modal=${plantFullInfoModalId} class="squareButton"><img src="../icons/info.png" alt="info"></button>
-                                <button class="squareButton"><img src="../icons/bag.png" alt="buy"></button>
+                                <button data-buy=${plant.id} class="squareButton"><img src="../icons/bag.png" alt="buy"></button>
                             </div>
                  
                         </div>
@@ -180,7 +180,7 @@ function renderPromoPlantSliderItem(plant, container) {
                             <div class="text__title__size_medium text__weight_regular">
                                 ${plant.name}
                             </div>
-                            <button>Buy now</button>
+                            <button data-buy=${plant.id}>Buy now</button>
                         </div>
         `
 
@@ -194,7 +194,6 @@ function renderTrendyPlant(plant, container, plantFullInfoModalId, reversedOrien
     if(reversedOrientation) {
         trendyPlantClassList.push('reversed')
     }
-    console.log(trendyPlantClassList)
 
     trendyPlant.classList.add(...trendyPlantClassList)
     trendyPlant.innerHTML = `
@@ -207,7 +206,7 @@ function renderTrendyPlant(plant, container, plantFullInfoModalId, reversedOrien
                             <h3 class="text__title__size_medium text__weight_regular">Rs. ${plant.price}/-</h3>
                             <div class="bigPlantItem__buttons">
                                 <button data-modal=${plantFullInfoModalId}>Explore</button>
-                                <button class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
+                                <button data-buy=${plant.id} class="squareButton"><img src="../icons/bag.png" alt="bag"></button>
                             </div>
                         </div>
         `

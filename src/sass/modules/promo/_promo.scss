@@ -82,6 +82,10 @@
       justify-content: space-between;
       gap: 60px;
     }
+
+    &__cart {
+      position: relative;
+    }
   }
 
   &__subsection_title {

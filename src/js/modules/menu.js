@@ -14,8 +14,6 @@ function initMenu() {
             hamburger.classList.remove(openClass);
         }
     });
-
-    console.log('Menu initialization finished!')
 }
 
 export default initMenu;

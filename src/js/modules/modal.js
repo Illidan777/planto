@@ -39,8 +39,6 @@ function stopVideo (modal) {
 function initModals() {
     const modalOpenButtons = document.querySelectorAll('[data-modal]')
 
-    modalOpenButtons.forEach(modalOpenButton => console.log(modalOpenButton.dataset.modal))
-
     modalOpenButtons.forEach(modalOpenButton => {
         const modalSelector = modalOpenButton.dataset.modal,
             modal = document.querySelector(`.${modalSelector}`),
@@ -57,8 +55,6 @@ function initModals() {
             closeModalOnOutClick(e, modal);
         });
     })
-
-    console.log('Modal initialization finished!')
 }
 
 export default initModals;

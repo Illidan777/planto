@@ -110,9 +110,19 @@ function updateQuantity(plantId, quantity) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    initCart()
-
+    updateCartItemTotal(plantId, cartItem.getTotal(), cart.getTotal())
     showToast('success', `Quantity has been changed!`)
+}
+
+function updateCartItemTotal(plantId, itemTotal, cartTotal) {
+    document.querySelector(`[data-plant-id="${plantId}"]`)
+        .querySelector('[data-total]').textContent = itemTotal
+    document.querySelector('.cart__checkout')
+        .querySelector('[data-total]').textContent = cartTotal
+}
+
+function formatAmount(amount) {
+    return `Rs. ${amount}/-`
 }
 
 function renderEmptyCart(cart) {
@@ -128,6 +138,7 @@ function renderCartItem(cartItem, parentContainer) {
     const cartItemElement = document.createElement('li');
 
     cartItemElement.classList.add('cart__item', 'defaultItemBlock')
+    cartItemElement.setAttribute('data-plant-id', cartItem.id)
 
     cartItemElement.innerHTML = `
                                 <div class="cart__item_image">
@@ -135,9 +146,9 @@ function renderCartItem(cartItem, parentContainer) {
                                 </div>
                                 <div class="cart__item_info">
                                     <h3 class="text__simple__size_big text__weight_medium">${cartItem.name}</h3>
-                                    <h4 class="text__simple__size_medium text__weight_regular">Rs. ${cartItem.getTotal()}/-</h4>
+                                    <h4 data-total class="text__simple__size_medium text__weight_regular">${formatAmount(cartItem.getTotal())}</h4>
                                     <label>
-                                        <input data-change-quantity type="text" value="${cartItem.quantity}">
+                                        <input data-quantity-input type="text" value="${cartItem.quantity}">
                                     </label>
                                     <button data-remove class="squareButton"><img src="../icons/recycle.png" alt="delete"></button>
                                 </div>
@@ -148,7 +159,7 @@ function renderCartItem(cartItem, parentContainer) {
     cartItemElement.querySelector('[data-remove]')
         .addEventListener('click', () => removeFromCart(cartItem.id));
 
-    const quantityInput = cartItemElement.querySelector('[data-change-quantity]');
+    const quantityInput = cartItemElement.querySelector('[data-quantity-input]');
     quantityInput.addEventListener('input', (e) => {
         e.preventDefault()
 
@@ -157,6 +168,7 @@ function renderCartItem(cartItem, parentContainer) {
             updateQuantity(cartItem.id, newQuantity);
         } else {
             quantityInput.value = cartItem.quantity;
+            showToast('error', 'Invalid value of quantity!')
         }
     });
 }
@@ -168,7 +180,11 @@ function initCart() {
     if(!cartData) {
         cartData = new Cart([]);
     }
-    const cartItems = cartData.items;
+    const cartItems = cartData.items,
+        itemsCount = cartItems.length;
+
+    const cartCounter = document.querySelector('.cart__countIcon')
+    cartCounter.textContent = itemsCount
 
     if (cartItems.length === 0) {
         renderEmptyCart(cartContainer)
@@ -183,6 +199,7 @@ function initCart() {
                         </div>
     `
     const cartItemsContainer = document.createElement('ul'),
+        divider = document.createElement('hr'),
         cartCheckoutContainer = document.createElement('div');
 
     cartItemsContainer.classList.add('cart__itemList')
@@ -192,23 +209,24 @@ function initCart() {
     cartCheckoutContainer.innerHTML = `
                             <div class="cart__checkout_item">
                                 <span>Items count</span>
-                                <span>${cartItems.length}</span>
+                                <span>${itemsCount}</span>
                             </div>
                             <div class="cart__checkout_item">
                                 <span>Shipping</span>
-                                <span>Rs. ${0}</span>
+                                <span>${formatAmount(0)}</span>
                             </div>
                             <div class="cart__checkout_item">
                                 <span>Discounts</span>
-                                <span>Rs. ${0}</span>
+                                <span>${formatAmount(0)}</span>
                             </div>
                             <div class="cart__checkout_item text__simple__size_medium text__weight_medium">
                                 <span>Final total</span>
-                                <span>Rs. ${cartData.getTotal()}</span>
+                                <span data-total >${formatAmount(cartData.getTotal())}</span>
                             </div>
     `
 
     cartContainer.prepend(cartCheckoutContainer)
+    cartContainer.prepend(divider)
     cartContainer.prepend(cartItemsContainer)
 }
 
