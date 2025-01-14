@@ -125,33 +125,33 @@ function renderPlantInfoModal(plant, container, plantFullInfoModalId) {
                         <div class="plantCard__info text__simple__size_small text__weight_thin">
                             <ul class="plantCard__characteristics">
                                 <li class="plantCard__characteristics_item">
-                                    <span>Size</span>
+                                    <span class="text__weight_super_bold">Size</span>
                                     <span>${plant.getSize()}</span>
                                 </li>
                                 <li class="plantCard__characteristics_item">
-                                    <span>Temperature Range</span>
+                                    <span class="text__weight_super_bold">Temperature Range</span>
                                     <span>${plant.temperatureRange}</span>
                                 </li>
                                 <li class="plantCard__characteristics_item">
-                                    <span>Type</span>
+                                    <span class="text__weight_super_bold">Type</span>
                                     <span>${plant.getType()}</span>
                                 </li>
                                 <li class="plantCard__characteristics_item">
-                                    <span>Care type</span>
+                                    <span class="text__weight_super_bold">Care type</span>
                                     <span>${plant.getCareType()}</span>
                                 </li>
                                 <li class="plantCard__characteristics_item">
-                                    <span>Irrigation type</span>
+                                    <span class="text__weight_super_bold">Irrigation type</span>
                                     <span>${plant.getIrrigationType()}</span>
                                 </li>
                                 <li class="plantCard__characteristics_item">
-                                    <span>Light type</span>
+                                    <span class="text__weight_super_bold">Light type</span>
                                     <span>${plant.getLightType()}</span>
                                 </li>
                             </ul>
                             <div class="plantCard__description">
                                 ${plant.description.full}
-                                <span class="text__simple__size_small text__weight_medium"> Advantages: ${plant.getAdvantages()}.</span>
+                                <span class="text__simple__size_small text__weight_super_bold"> Advantages: ${plant.getAdvantages()}.</span>
                             </div>
                         </div>
                         <button data-buy=${plant.id}>Buy now</button>
