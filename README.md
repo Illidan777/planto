@@ -1,3 +1,4 @@
 # To do
-- toast, slider, modal animations
+- toast, modal animations
+- total in cart + round total
 

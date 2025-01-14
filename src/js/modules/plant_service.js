@@ -237,10 +237,10 @@ function renderBestO2Plant(plant, container, plantFullInfoModalId) {
 function renderPlants() {
 
     const appContainer = document.querySelector('.app'),
-        promoSliderContainer = appContainer.querySelector('.promo__plant-slider'),
+        promoSliderContainer = appContainer.querySelector('.promo__plant-slider').querySelector('.slider__wrapper'),
         trendyRubricContainer = appContainer.querySelector('.promo__trendyPlants_itemWrapper'),
         topSellingRubricContainer = appContainer.querySelector('.topSelling__topPlants'),
-        bestO2RubricContainer = appContainer.querySelector('.bestO2-slider');
+        bestO2RubricContainer = appContainer.querySelector('.bestO2-slider').querySelector('.slider__wrapper');
 
     loadAllPlants().forEach((plant, index) => {
 

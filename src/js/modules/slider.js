@@ -19,16 +19,12 @@ function initSliders() {
         }
         currentSlideTitle.textContent = formattedSlideNumber(currentSlideIndex + 1);
 
-        sliderItems.forEach(sliderItem => {
-            sliderItem.classList.add('hide');
-        })
-
         let currentSlide = sliderItems.item(currentSlideIndex)
         let currentNavigationButton = navigationBarItems.item(currentSlideIndex)
 
         // set default slide
         currentNavigationButton.classList.add('slider__navigationBar__item-active');
-        currentSlide.classList.remove('hide');
+        currentSlide.classList.remove('active');
 
 
         nextButton.addEventListener('click', () => {
@@ -49,37 +45,26 @@ function initSliders() {
 
         function showSlide(slideIndex) {
             // hide previous slide
-            currentSlide.classList.add('hide');
+            currentSlide.classList.remove('active');
             currentNavigationButton.classList.remove('slider__navigationBar__item-active');
 
             currentNavigationButton = navigationBarItems.item(slideIndex)
             currentSlide = sliderItems.item(slideIndex)
 
             // show new slide by defined index
-            currentSlide.classList.remove('hide');
+            currentSlide.classList.add('active');
             currentNavigationButton.classList.add('slider__navigationBar__item-active');
 
             currentSlideTitle.textContent = formattedSlideNumber(slideIndex + 1);
         }
 
-        const autoSlideInterval = setInterval(() => {
+        setInterval(() => {
             currentSlideIndex = currentSlideIndex === sliderItems.length - 1
                 ? 0
                 : currentSlideIndex + 1;
 
             showSlide(currentSlideIndex);
         }, 3000);
-
-        slider.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-        slider.addEventListener('mouseleave', () => {
-            setInterval(() => {
-                currentSlideIndex = currentSlideIndex === sliderItems.length - 1
-                    ? 0
-                    : currentSlideIndex + 1;
-
-                showSlide(currentSlideIndex);
-            }, 3000);
-        });
 
     })
 
