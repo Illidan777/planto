@@ -1,6 +1,7 @@
 import plants from "./const/plants";
-import {PLANT_TYPES, PLANT_CARE_TYPES, PLANT_LIGHT_TYPES, PLANT_IRRIGATION_TYPES} from "./const/enums"
+import { PLANT_TYPES, PLANT_CARE_TYPES, PLANT_LIGHT_TYPES, PLANT_IRRIGATION_TYPES } from "./const/enums";
 
+// Base class representing basic information about a plant
 class PlantBaseInfo {
     constructor(id, name, price, imgUrl) {
         this.id = id;
@@ -10,7 +11,8 @@ class PlantBaseInfo {
     }
 }
 
-class Plant extends PlantBaseInfo{
+// Extended class representing a detailed plant with additional attributes
+class Plant extends PlantBaseInfo {
     constructor({
                     id,
                     name,
@@ -27,6 +29,7 @@ class Plant extends PlantBaseInfo{
                     rubrics
                 }) {
         super(id, name, price, imgUrl);
+
         this.description = description;
         this.type = type;
         this.careType = careType;
@@ -35,50 +38,61 @@ class Plant extends PlantBaseInfo{
         this.temperatureRange = temperatureRange;
         this.size = size;
         this.advantages = advantages;
-        this.rubrics = rubrics
+        this.rubrics = rubrics; // Array of categories represents in which section of website the plant has to be included
     }
 
+    // Retrieves the human-readable type of the plant from the enumeration
     getType() {
-        return PLANT_TYPES.get(this.type) ? PLANT_TYPES.get(this.type) : 'Unknown plant type'
+        return PLANT_TYPES.get(this.type) ? PLANT_TYPES.get(this.type) : 'Unknown plant type';
     }
 
+    // Retrieves the human-readable care type of the plant from the enumeration
     getCareType() {
-        return PLANT_CARE_TYPES.get(this.careType) ? PLANT_CARE_TYPES.get(this.careType) : 'Unknown care type'
+        return PLANT_CARE_TYPES.get(this.careType) ? PLANT_CARE_TYPES.get(this.careType) : 'Unknown care type';
     }
 
+    // Retrieves the human-readable light type of the plant from the enumeration
     getLightType() {
-        return PLANT_LIGHT_TYPES.get(this.lightType) ? PLANT_LIGHT_TYPES.get(this.lightType) : 'Unknown light type'
+        return PLANT_LIGHT_TYPES.get(this.lightType) ? PLANT_LIGHT_TYPES.get(this.lightType) : 'Unknown light type';
     }
 
+    // Retrieves the human-readable irrigation type of the plant from the enumeration
     getIrrigationType() {
-        return PLANT_IRRIGATION_TYPES.get(this.irrigationType) ? PLANT_IRRIGATION_TYPES.get(this.irrigationType) : 'Unknown irrigation type'
+        return PLANT_IRRIGATION_TYPES.get(this.irrigationType) ? PLANT_IRRIGATION_TYPES.get(this.irrigationType) : 'Unknown irrigation type';
     }
 
+    // Formats the plant's dimensions into a readable string
     getSize() {
         return `${this.size.width} x ${this.size.height} x ${this.size.length}`;
     }
 
+    // Joins the list of advantages into a comma-separated string
     getAdvantages() {
         return this.advantages.join(", ");
     }
 }
 
+// Function to load a plant by its unique ID
 function loadPlantById(id) {
-    if(!id) {
-        console.error('Plant id is empty!')
-        return
+    if (!id) {
+        console.error('Plant id is empty!');
+        return;
     }
-    const plant = loadAllPlants().find(plant => plant.id === +id)
+    const plant = loadAllPlants().find(plant => plant.id === +id);
+
     if (!plant) {
         console.error(`Plant by id ${id} not found`);
     }
-    return plant
+
+    return plant;
 }
 
+// Function to load all plants and create Plant objects
 function loadAllPlants() {
     return plants.map(plant => new Plant(plant));
 }
 
+// Render specified plant in specified container (Plant shop card)
 function renderPlantCard(plant, container, plantFullInfoModalId) {
     const plantItem = document.createElement('div');
 
@@ -105,6 +119,7 @@ function renderPlantCard(plant, container, plantFullInfoModalId) {
     container.appendChild(plantItem)
 }
 
+// Render specified plant in specified container (Plant detailed info modal content)
 function renderPlantInfoModal(plant, container, plantFullInfoModalId) {
     const plantItemInfoModal = document.createElement('div')
 
@@ -171,6 +186,7 @@ function renderPlantInfoModal(plant, container, plantFullInfoModalId) {
     container.appendChild(plantItemInfoModal)
 }
 
+// Render specified plant in specified container (Plant slider item in Promo section)
 function renderPromoPlantSliderItem(plant, container) {
     const plantSliderItem = document.createElement('div')
 
@@ -191,6 +207,7 @@ function renderPromoPlantSliderItem(plant, container) {
     container.prepend(plantSliderItem);
 }
 
+// Render specified plant in specified container (Plant item in Trendy section)
 function renderTrendyPlant(plant, container, plantFullInfoModalId, reversedOrientation) {
     const trendyPlant = document.createElement('div')
 
@@ -218,6 +235,7 @@ function renderTrendyPlant(plant, container, plantFullInfoModalId, reversedOrien
     container.appendChild(trendyPlant);
 }
 
+// Render specified plant in specified container (Plant slider item in Best O2 section)
 function renderBestO2Plant(plant, container, plantFullInfoModalId) {
     const bestO2Plant = document.createElement('div')
 
@@ -238,40 +256,48 @@ function renderBestO2Plant(plant, container, plantFullInfoModalId) {
     container.prepend(bestO2Plant);
 }
 
+// Function to render plants on the page
 function renderPlants() {
-
+    // Select the containers where different plant rubrics will be rendered
     const appContainer = document.querySelector('.app'),
         promoSliderContainer = appContainer.querySelector('.promo__plant-slider').querySelector('.slider__wrapper'),
         trendyRubricContainer = appContainer.querySelector('.promo__trendyPlants_itemWrapper'),
         topSellingRubricContainer = appContainer.querySelector('.topSelling__topPlants'),
         bestO2RubricContainer = appContainer.querySelector('.bestO2-slider').querySelector('.slider__wrapper');
 
+    // Loop through all the plants and render them based on their rubric(category)
     loadAllPlants().forEach((plant, index) => {
 
-        const plantFullInfoModalId = `plantModal_${plant.id}`
+        // Generate a unique ID for each plant's modal
+        const plantFullInfoModalId = `plantModal_${plant.id}`;
 
+        // Render modal with full plant information
         renderPlantInfoModal(plant, appContainer, plantFullInfoModalId);
 
-        if(plant.rubrics.includes('PROMO_SLIDER')) {
-            renderPromoPlantSliderItem(plant, promoSliderContainer)
+        // Check if the plant should be displayed in the promo slider
+        if (plant.rubrics.includes('PROMO_SLIDER')) {
+            renderPromoPlantSliderItem(plant, promoSliderContainer);
         }
 
-        if(plant.rubrics.includes('TRENDY')) {
-            const reversedOrientation = (index + 1) % 2 === 0
-            renderTrendyPlant(plant, trendyRubricContainer, plantFullInfoModalId, reversedOrientation)
+        // Check if the plant should be displayed in the trendy rubric
+        if (plant.rubrics.includes('TRENDY')) {
+            const reversedOrientation = (index + 1) % 2 === 0; // Alternate orientation based on the index
+            renderTrendyPlant(plant, trendyRubricContainer, plantFullInfoModalId, reversedOrientation);
         }
 
+        // Check if the plant should be displayed in the top-selling rubric
         if (plant.rubrics.includes('TOP_SELLING')) {
             renderPlantCard(plant, topSellingRubricContainer, plantFullInfoModalId);
         }
 
-        if(plant.rubrics.includes('BEST_O2')) {
-            renderBestO2Plant(plant, bestO2RubricContainer, plantFullInfoModalId)
+        // Check if the plant should be displayed in the best O2 rubric
+        if (plant.rubrics.includes('BEST_O2')) {
+            renderBestO2Plant(plant, bestO2RubricContainer, plantFullInfoModalId);
         }
-    })
+    });
 }
 
-export { loadPlantById, PlantBaseInfo}
+// Export the necessary functions and objects for use in other modules
+export { loadPlantById, PlantBaseInfo };
 export default renderPlants;
-
 
