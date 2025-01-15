@@ -31,6 +31,7 @@
           opacity: 1;
           transition: .25s ease-in-out;
         }
+
         span:nth-child(1) {
           width: 100%;
         }
@@ -67,7 +68,6 @@
             max-height: 50px;
             object-fit: cover;
           }
-
         }
       }
 
@@ -118,10 +118,12 @@
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+
     .slider__counter, .slider__navigationBar {
       padding: 10px;
       margin: 0 auto;
     }
+
     &-item {
       padding: 0;
     }

@@ -1,6 +1,5 @@
 @media (max-width: 1500px) {
   .text {
-
     &__simple {
       &__size {
         &_big {
@@ -87,6 +86,7 @@
 
   .bigPlantItem.reversed .bigPlantItem__image {
     margin: 0 auto;
+
     img {
       transform: scale(1.2);
     }
@@ -240,9 +240,6 @@
     }
   }
 }
-
-
-
 
 @media (max-width: 401px) {
   .text {

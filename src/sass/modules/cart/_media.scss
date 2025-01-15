@@ -1,20 +1,6 @@
-@media (max-width: 1500px) {
-
-}
-
-@media (max-width: 1200px) {
-
-}
-
-@media (max-width: 992px) {
-}
-
-@media (max-width: 768px) {
-
-}
-
 @media (max-width: 576px) {
   .cart {
+
     &__itemList {
       gap: 20px;
     }
@@ -36,7 +22,6 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
-
 
       &_info {
         justify-content: center;

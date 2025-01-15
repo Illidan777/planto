@@ -138,9 +138,11 @@ input::placeholder {
     display: flex;
     align-items: flex-start;
     gap: 20px;
+
     &-icon {
       width: 60px;
       height: 60px;
+
       img {
         width: 100%;
         height: 100%;
@@ -157,23 +159,7 @@ input::placeholder {
 .sectionTitle {
   padding: 0;
   display: flex;
-  position: relative;
-
-  &__leftFrame {
-    height: 100%;
-    position: absolute;
-    left: -10%;
-    bottom: -15%;
-
-  }
-
-  &__rightFrame {
-    height: 100%;
-    position: absolute;
-    left: 90%;
-  }
 }
-
 
 .logo {
   display: flex;
@@ -201,6 +187,7 @@ input::placeholder {
     width: 250px;
     height: 250px;
     margin: 0 auto;
+
     img {
       width: 100%;
       height: 100%;
@@ -330,6 +317,7 @@ input::placeholder {
     height: 100%;
     opacity: 0;
     transition: opacity 0.9s ease-in-out;
+
     &.active {
       position: static;
       opacity: 1;

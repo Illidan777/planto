@@ -5,10 +5,6 @@
   }
 }
 
-@media (max-width: 1200px) {
-
-}
-
 @media (max-width: 992px) {
   .footer {
     grid-template-columns: 1fr 1fr;
@@ -33,12 +29,7 @@
   }
 }
 
-@media (max-width: 768px) {
-
-}
-
 @media (max-width: 576px) {
-
   .footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
