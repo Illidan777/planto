@@ -18,7 +18,7 @@ The following technologies were utilized in the development of Planto:
 ## Features
 
 - A fully responsive single-page design.
-- Interactive UI elements implemented with native JavaScript.
+- Interactive UI elements implemented with native JavaScript (modals, toast notifications, sliders, animations).
 - Modular and maintainable code structure.
 - Modern CSS layouts using grids and flexbox.
 - Automated build process using Gulp and Webpack.
