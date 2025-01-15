@@ -1,8 +1,9 @@
 .modal {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
+  transform: translateY(-100%);
   top: 0;
   left: 0;
   width: 100%;
@@ -10,16 +11,12 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, .5);
   z-index: 10;
+  transition: all 0.6s;
+  opacity: 0;
 
   &.opened {
-    display: flex;
-    animation: slidein 600ms;
-  }
-
-  &.closed {
-    display: none;
-    transition: 600ms all;
-    animation: slideout 600ms;
+    transform: translateY(0);
+    opacity: 1;
   }
 
   &__dialog {
@@ -82,30 +79,5 @@
     aspect-ratio: 16 / 9;
     border: none;
     border-radius: 10px;
-  }
-}
-
-
-@keyframes slidein {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes slideout {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
   }
 }

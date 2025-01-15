@@ -31,7 +31,7 @@ class Cart {
         this.items.forEach(item => {
             total += item.getTotal();
         })
-        return total;
+        return roundNumber(total);
     }
 }
 
@@ -42,7 +42,7 @@ class CartItem extends PlantBaseInfo {
     }
 
     getTotal() {
-        return this.quantity * this.price;
+        return roundNumber(this.quantity * this.price);
     }
 }
 
@@ -83,7 +83,6 @@ function removeFromCart(plantId) {
     }
 
     cart.items = cart.items.filter(plant => +plant.id !== +plantId)
-
     localStorage.setItem("cart", JSON.stringify(cart));
 
     initCart()
@@ -107,22 +106,47 @@ function updateQuantity(plantId, quantity) {
     }
 
     cartItem.quantity = quantity
-
     localStorage.setItem("cart", JSON.stringify(cart));
 
     updateCartItemTotal(plantId, cartItem.getTotal(), cart.getTotal())
     showToast('success', `Quantity has been changed!`)
 }
 
+function validateAndUpdateQuantity(quantityInput, cartItem) {
+    let inputValue = quantityInput.value
+
+    if (inputValue && inputValue.length > 5) {
+        showToast('error', 'Invalid value of quantity!')
+        quantityInput.value = inputValue.substring(0, 5);
+        return
+    }
+
+    inputValue = quantityInput.value
+
+    const newQuantity = parseInt(inputValue, 10);
+    if (!isNaN(newQuantity) && newQuantity > 0) {
+        updateQuantity(cartItem.id, newQuantity);
+    } else {
+        quantityInput.value = cartItem.quantity;
+        showToast('error', 'Invalid value of quantity!')
+    }
+}
+
 function updateCartItemTotal(plantId, itemTotal, cartTotal) {
-    document.querySelector(`[data-plant-id="${plantId}"]`)
+    const cartContainer = document.querySelector('.cart');
+
+    cartContainer.querySelector(`[data-plant-id="${plantId}"]`)
         .querySelector('[data-total]').textContent = itemTotal
-    document.querySelector('.cart__checkout')
+    cartContainer.querySelector('.cart__checkout')
         .querySelector('[data-total]').textContent = cartTotal
 }
 
 function formatAmount(amount) {
     return `Rs. ${amount}/-`
+}
+
+function roundNumber(number) {
+    return Math.round(number * 100) / 100
 }
 
 function renderEmptyCart(cart) {
@@ -133,6 +157,7 @@ function renderEmptyCart(cart) {
                         </div>
     `
 }
+
 
 function renderCartItem(cartItem, parentContainer) {
     const cartItemElement = document.createElement('li');
@@ -162,14 +187,7 @@ function renderCartItem(cartItem, parentContainer) {
     const quantityInput = cartItemElement.querySelector('[data-quantity-input]');
     quantityInput.addEventListener('input', (e) => {
         e.preventDefault()
-
-        const newQuantity = parseInt(quantityInput.value, 10);
-        if (!isNaN(newQuantity) && newQuantity > 0) {
-            updateQuantity(cartItem.id, newQuantity);
-        } else {
-            quantityInput.value = cartItem.quantity;
-            showToast('error', 'Invalid value of quantity!')
-        }
+        validateAndUpdateQuantity(quantityInput, cartItem);
     });
 }
 

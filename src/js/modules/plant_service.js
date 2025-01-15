@@ -64,6 +64,10 @@ class Plant extends PlantBaseInfo{
 }
 
 function loadPlantById(id) {
+    if(!id) {
+        console.error('Plant id is empty!')
+        return
+    }
     const plant = loadAllPlants().find(plant => plant.id === +id)
     if (!plant) {
         console.error(`Plant by id ${id} not found`);
